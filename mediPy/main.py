@@ -33,26 +33,26 @@ def listenAndProcess():
             query = query.lower()
             print('User said: '+ query)
             if 'medi' in query or 'medina' in query:
-                sayIt('Oh, yes she definitely is.')
+                printAndSayTxt('Oh, yes she definitely is.')
             elif 'thank you' in query:
-                sayIt('You\'re welcome')
+                printAndSayTxt('You\'re welcome')
             elif 'hello' in query or 'hi' in query:
-                sayIt("Hello!")
+                printAndSayTxt("Hello!")
             elif 'open google' in query:
+                printAndSayTxt('Opening google.com')
                 webbrowser.open('google.com')
             elif 'open youtube' in query:
+                printAndSayTxt('Opening youtube.com')
                 webbrowser.open('youtube.com')
             elif 'joke' in query:
                 joke = pyjokes.get_joke()
-                print(joke)
-                sayIt(joke)
+                printAndSayTxt(joke)
             elif 'creator' in query or 'created' in query:
-                sayIt('Medina Medi created me.')
+                printAndSayTxt('Medina Medi created me.')
             elif 'wikipedia' in query:
                 query = query.replace('wikipedia', '')
                 results = wikipedia.summary(query, sentences = 2)
-                print(results)
-                sayIt(results)
+                printAndSayTxt(results)
             elif 'exit' in query or 'bye' in query:
                 exit()
 
@@ -61,6 +61,9 @@ def listenAndProcess():
             print('I did not understand. Please repeat it.')
             return "None"
 
+def printAndSayTxt(txt):
+    print(txt)
+    sayIt(txt)
 
 
 sayIt("Hi, how can I help you?")
