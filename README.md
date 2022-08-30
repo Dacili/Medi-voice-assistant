@@ -1,7 +1,7 @@
 # Medi-voice-assistant
 
 Simple Medi voice assistant written in Python programming language.  
-After you run it, you will be able to say some voice commands, program will answer with artificial speaker and depending on the words that you use, different action will be triggered (like opening some website, assistant telling a joke, searching with wikipedia...).  
+After you run it, you will be able to say some voice commands (package: speech_recognition is used for this), program will answer with artificial speaker (package: pyttsx3, text to speech is used) and depending on the words that you use, different action will be triggered (like opening some website, assistant telling a joke, searching with wikipedia...).  
 ![alt text](https://static.techspot.com/images2/news/bigimage/2019/06/2019-06-17-image-8.jpg)
 
 Example of the flow:
